@@ -32,6 +32,8 @@ body {
 }
 
 nav#navbar {
+        user-select: none;
+
         header {
                 font-size: 3rem;
                 background-color: var(--gray1);
@@ -39,6 +41,7 @@ nav#navbar {
                 text-align: center;
                 padding: 20px 10px;
                 font-weight: 700;
+                cursor: pointer;
         }
 
         ul {
