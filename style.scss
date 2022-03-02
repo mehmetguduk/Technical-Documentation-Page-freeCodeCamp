@@ -1,230 +1,222 @@
+/*
+THIS FILE WAS DEVELOPED BY MEHMET GUDUK
+© 2022 COPYRIGHT, LICENSED WITH GPL-3.0 LICENSE, AUTHOR IS MEHMET GUDUK
+*/
+
+// @@@@@@@@@@@@@@@@@@@@@@@_STYLE_@@@@@@@@@@@@@@@@@@@@@@@
+
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;500;700&display=swap");
 
+:root {
+        --orange1: #ff4500;
+        --black1: #000000;
+        --black2: #262626;
+        --gray1: #24282a;
+        --gray2: #303131;
+        --gray3: #33373a;
+        --white1: #cbd0d0;
+}
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
 }
 
 html {
-    font-family: "Hind Madurai", sans-serif;
+        font-family: "Hind Madurai", sans-serif;
 }
 
 body {
-    background-color: #33373a;
+        background-color: var(--gray3);
 }
 
 nav#navbar {
-    header {
-        font-size: 3rem;
-        background-color: #24282a;
-        color: #ff4500;
-        text-align: center;
-        padding: 20px 10px;
-        font-weight: 700;
-    }
-
-    ul {
-        height: 100%;
-        background-color: #303131;
-        list-style-type: none;
-
-        li {
-            border-bottom: 1px solid #262626;
-
-            a.nav-link {
-                text-decoration: none;
-                font-size: 1.8rem;
-                color: #cbd0d0;
-                transition: 0.3s;
-                display: block;
-
-                &:visited,
-                &:focus {
-                    color: #cbd0d0;
-                }
-                &:hover {
-                    color: #ff4500;
-                }
-            }
+        header {
+                font-size: 3rem;
+                background-color: var(--gray1);
+                color: var(--orange1);
+                text-align: center;
+                padding: 20px 10px;
+                font-weight: 700;
         }
-    }
+
+        ul {
+                height: 100%;
+                background-color: var(--gray2);
+                list-style-type: none;
+
+                li {
+                        border-bottom: 1px solid var(--black2);
+
+                        a.nav-link {
+                                text-decoration: none;
+                                font-size: 1.8rem;
+                                color: var(--white1);
+                                transition: 0.3s;
+                                display: block;
+
+                                &:visited,
+                                &:focus {
+                                        color: var(--white1);
+                                }
+                                &:hover {
+                                        color: var(--orange1);
+                                }
+                        }
+                }
+        }
 }
 
 main#main-doc {
-    section.main-section {
-        color: #cbd0d0;
-        background-color: #303131;
-        padding: 20px;
-        border-radius: 4px;
+        section.main-section {
+                color: var(--white1);
+                background-color: var(--gray2);
+                padding: 20px;
+                border-radius: 4px;
 
-        header {
-            color: #ff4500;
-            font-weight: 500;
-            font-size: 2.4rem;
-        }
-
-        article {
-            font-weight: 300;
-            font-size: 1.7rem;
-
-            p {
-                margin: 10px 0;
-
-                a {
-                    color: #ff4500;
-                    font-weight: 500;
-                    text-decoration: none;
-                    cursor: pointer;
-                    transition: 0.3s;
-                    
-                    &:hover {
-                        color: #cbd0d0;
-                    }
+                header {
+                        color: var(--orange1);
+                        font-weight: 500;
+                        font-size: 2.4rem;
                 }
-            }
 
-            ul {
-                li {
-                    margin-left: 20px;
+                article {
+                        font-weight: 300;
+                        font-size: 1.7rem;
 
-                    p {
-                        margin: 0;
-                    }
-                    ul {
-                        li {
-                            margin-left: 20px;
+                        p {
+                                margin: 10px 0;
+
+                                a {
+                                        color: var(--orange1);
+                                        font-weight: 500;
+                                        text-decoration: none;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+
+                                        &:hover {
+                                                color: var(--white1);
+                                        }
+                                }
                         }
-                    }
-                }
-            }
 
-            code {
-                margin: 10px 0;
-                border-radius: 3px;
-                border: 1px solid #000000;
-                background-color: #24282a;
-                display: block;
-                padding: 10px;
-            }
+                        ul {
+                                li {
+                                        margin-left: 20px;
+
+                                        p {
+                                                margin: 0;
+                                        }
+                                        ul {
+                                                li {
+                                                        margin-left: 20px;
+                                                }
+                                        }
+                                }
+                        }
+
+                        code {
+                                margin: 10px 0;
+                                border-radius: 3px;
+                                border: 1px solid var(--black1);
+                                background-color: var(--gray1);
+                                display: block;
+                                padding: 10px;
+                        }
+                }
         }
-    }
 }
+
+// @@@@@@@@@@@@@@@@@@@@@@@_RESPONSIVE_@@@@@@@@@@@@@@@@@@@@@@@
 
 /* min-599 px */
 @media only screen and (max-width: 600px) {
-    html {
-        font-size: 6px;
-    }
-    main#main-doc {
-        position: relative;
-        padding: 10px;
-    }
-    nav#navbar {
-        position: relative;
-    }
-    section.main-section:not(section.main-section:last-child) {
-        margin-bottom: 10px;
-    }
-    a.nav-link {
-        padding: 6px 15px;
-        font-weight: 300;
-    }
-    a.nav-link::before {
-        color: #ff4500;
-        content: "# ";
-    }
+        html {
+                font-size: 7px;
+        }
+        main#main-doc {
+                position: relative;
+                padding: 10px;
+        }
+        nav#navbar {
+                position: relative;
+        }
+        section.main-section:not(section.main-section:last-child) {
+                margin-bottom: 10px;
+        }
+        a.nav-link {
+                padding: 6px 15px;
+                font-weight: 300;
+        }
+        a.nav-link::before {
+                color: var(--orange1);
+                content: "# ";
+        }
 }
 
 /* 600-767 px */
 @media only screen and (min-width: 600px) {
-    html {
-        font-size: 7px;
-    }
-    main#main-doc {
-        position: absolute;
-        margin-left: 196px;
-        padding: 30px;
-    }
+        html {
+                font-size: 8px;
+        }
+        main#main-doc {
+                position: absolute;
+                margin-left: 223px;
+                padding: 30px;
+        }
 
-    nav#navbar {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 28rem;
-        height: 100%;
-        border-right: 1px solid #262626;
-    }
+        nav#navbar {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 28rem;
+                height: 100%;
+                border-right: 1px solid var(--black2);
+        }
 
-    section.main-section:not(section.main-section:last-child) {
-        margin-bottom: 30px;
-    }
-    a.nav-link {
-        padding: 10px 20px;
-        font-weight: 500;
-    }
-    a.nav-link::before {
-        content: "";
-    }
+        section.main-section:not(section.main-section:last-child) {
+                margin-bottom: 30px;
+        }
+        a.nav-link {
+                padding: 10px 20px;
+                font-weight: 500;
+        }
+        a.nav-link::before {
+                content: "";
+        }
 }
 
 /* 768-991 px */
 @media only screen and (min-width: 768px) {
-    html {
-        font-size: 8px;
-    }
-    main#main-doc {
-        position: absolute;
-        margin-left: 240px;
-        padding: 70px;
-    }
+        main#main-doc {
+                margin-left: 240px;
+                padding: 70px;
+        }
 
-    nav#navbar {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 30rem;
-        height: 100%;
-        border-right: 1px solid #262626;
-    }
+        nav#navbar {
+                width: 30rem;
+        }
 }
 
 /* 992-1199 px*/
 @media only screen and (min-width: 992px) {
-    html {
-        font-size: 9px;
-    }
-    main#main-doc {
-        position: absolute;
-        margin-left: 270px;
-        padding: 70px 100px;
-    }
-    nav#navbar {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 30rem;
-        height: 100%;
-        border-right: 1px solid #262626;
-    }
+        html {
+                font-size: 9px;
+        }
+        main#main-doc {
+                margin-left: 270px;
+                padding: 70px 100px;
+        }
 }
 
 /* 1200-max px */
 @media only screen and (min-width: 1200px) {
-    html {
-        font-size: 9px;
-    }
-    main#main-doc {
-        position: absolute;
-        margin-left: 300px;
-        padding: 80px 140px;
-    }
-    nav#navbar {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 30rem;
-        height: 100%;
-        border-right: 1px solid #262626;
-    }
+        html {
+                font-size: 9px;
+        }
+        main#main-doc {
+                margin-left: 300px;
+                padding: 80px 140px;
+        }
 }
