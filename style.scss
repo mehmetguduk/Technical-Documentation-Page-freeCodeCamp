@@ -72,6 +72,8 @@ nav#navbar {
 }
 
 main#main-doc {
+        position: relative;
+
         section.main-section {
                 color: var(--white1);
                 background-color: var(--gray2);
@@ -126,6 +128,23 @@ main#main-doc {
                                 background-color: var(--gray1);
                                 display: block;
                                 padding: 10px;
+                        }
+                }
+        }
+}
+
+section.copyright {
+        p.copyright-text {
+                color: var(--white1);
+                font-size: 12px;
+                text-align: center;
+
+                a.copyright-link {
+                        color: var(--orange1);
+                        text-decoration: none;
+
+                        &:active {
+                                color: var(--white1);
                         }
                 }
         }
